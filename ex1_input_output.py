@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 from pathlib import Path
 
-
 class MyException(Exception):
     pass
 
 def Dane():
     name, surname, date_of_birth = input("Enter name, surname and date of birth: ").split(" ")
     print(f"Your name: {name}, surname: {surname}, date of birth: {date_of_birth}")
-
 
 def Szyfr():
     szyfr = 1234
