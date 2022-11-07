@@ -7,13 +7,13 @@ from PIL import Image
 
 def CountOfFiles():
     count = 0
-    for root, dirs, files in os.walk(r'C:\Users\mkasz\Desktop\Python\TestDir'):
+    for root, dirs, files in os.walk('TestDir'):
         count += len(files)
     print(f'File count:{count}')
 
 def DirectoryStructure():
     tab = ""
-    for root, dirs, files in os.walk(r'C:\Users\mkasz\Desktop\Python\TestDir'):
+    for root, dirs, files in os.walk('TestDir'):
         print(tab, root)
         tab+="\t"
         if len(files):
@@ -26,8 +26,8 @@ def DirectoryStructure():
                 print(f"{tab}  {d}")
 
 def ConvertToPng():
-    image = Image.open(r'C:\Users\mkasz\Desktop\Python\TestDir\kotki.jpg')
-    image.save(r'C:\Users\mkasz\Desktop\Python\TestDir\kotki.png')
+    image = Image.open(r'TestDir\kotki.jpg')
+    image.save(r'TestDir\kotki.png')
 
 
 if __name__ == '__main__':
